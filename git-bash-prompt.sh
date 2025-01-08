@@ -24,10 +24,9 @@ git_color() {
 	fi
 }
 
-# making the terminal easier to see
+# Making the terminal easier to see
 git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-
 }
 
 PS1="\u@\h \[$OCHRE\]\w"
